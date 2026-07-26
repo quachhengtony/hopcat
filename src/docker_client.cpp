@@ -4,8 +4,12 @@
 #include <cstring>
 #include <cerrno>
 #include <iostream>
-#include "container_client.h"
+#include "../include/container_client.h"
+#if __APPLE__
 #include <Kernel/sys/un.h>
+#elif __linux__
+#include <sys/un.h>
+#endif
 #include <unistd.h>
 
 const std::string DOCKER_SOCKET_PATH = "/Users/I753116/.colima/default/docker.sock";

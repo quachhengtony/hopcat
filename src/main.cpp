@@ -6,6 +6,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <cstdio>
+#include "../include/container_client.h"
 #include "docker_client.cpp"
 
 using std::cin;
